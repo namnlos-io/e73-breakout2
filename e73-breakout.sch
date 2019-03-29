@@ -573,4 +573,26 @@ F 3 "" H 6500 3700 50  0001 C CNN
 	1    6500 3700
 	1    0    0    -1  
 $EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5CAD29E2
+P 9000 4000
+F 0 "H1" H 9100 4000 50  0000 L CNN
+F 1 "Symbol" H 9100 3955 50  0001 L CNN
+F 2 "e73-breakout:SymbolLeadFree" H 9000 4000 50  0001 C CNN
+F 3 "~" H 9000 4000 50  0001 C CNN
+	1    9000 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5CAD30C6
+P 9000 4200
+F 0 "H2" H 9100 4200 50  0000 L CNN
+F 1 "Symbol" H 9100 4155 50  0001 L CNN
+F 2 "e73-breakout:SymbolIdDots" H 9000 4200 50  0001 C CNN
+F 3 "~" H 9000 4200 50  0001 C CNN
+	1    9000 4200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
