@@ -1,0 +1,301 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L RF_Module:E73-2G4M04S-52810 U?
+U 1 1 5C9DA1AC
+P 2100 2400
+F 0 "U?" H 2100 711 50  0000 C CNN
+F 1 "E73-2G4M04S-52810" H 2100 620 50  0000 C CNN
+F 2 "RF_Module:E73-2G4M04S" H 2100 2850 50  0001 C CNN
+F 3 "http://www.cdebyte.com/en/downpdf.aspx?id=243" H 2100 2850 50  0001 C CNN
+	1    2100 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_ARM_JTAG_SWD_10 J?
+U 1 1 5C9DE675
+P 2500 5600
+F 0 "J?" H 2057 5646 50  0000 R CNN
+F 1 "Conn_ARM_JTAG_SWD_10" H 2057 5555 50  0000 R CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD" H 2500 5600 50  0001 C CNN
+F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf" V 2150 4350 50  0001 C CNN
+	1    2500 5600
+	1    0    0    -1  
+$EndComp
+Text Label 3000 5300 0    50   ~ 0
+~RST
+Text Label 3000 5500 0    50   ~ 0
+SWDCLK
+Text Label 3000 5600 0    50   ~ 0
+SWDIO
+Text Label 1200 3100 2    50   ~ 0
+SWDIO
+Text Label 1200 3000 2    50   ~ 0
+SWDCLK
+Text Label 1200 2900 2    50   ~ 0
+~RST
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5C9DFA7F
+P 2500 5000
+F 0 "#PWR?" H 2500 4850 50  0001 C CNN
+F 1 "+3V3" H 2515 5173 50  0000 C CNN
+F 2 "" H 2500 5000 50  0001 C CNN
+F 3 "" H 2500 5000 50  0001 C CNN
+	1    2500 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C9E038D
+P 2500 6200
+F 0 "#PWR?" H 2500 5950 50  0001 C CNN
+F 1 "GND" H 2505 6027 50  0000 C CNN
+F 2 "" H 2500 6200 50  0001 C CNN
+F 3 "" H 2500 6200 50  0001 C CNN
+	1    2500 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 6200 2400 6200
+Connection ~ 2500 6200
+NoConn ~ 3000 5800
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5C9E09C9
+P 2100 800
+F 0 "#PWR?" H 2100 650 50  0001 C CNN
+F 1 "+3V3" H 2115 973 50  0000 C CNN
+F 2 "" H 2100 800 50  0001 C CNN
+F 3 "" H 2100 800 50  0001 C CNN
+	1    2100 800 
+	1    0    0    -1  
+$EndComp
+Text Label 3000 5700 0    50   ~ 0
+SWO
+Text Label 3000 2600 0    50   ~ 0
+SWO
+$Comp
+L power:GND #PWR?
+U 1 1 5C9E10A5
+P 2100 4000
+F 0 "#PWR?" H 2100 3750 50  0001 C CNN
+F 1 "GND" H 2105 3827 50  0000 C CNN
+F 2 "" H 2100 4000 50  0001 C CNN
+F 3 "" H 2100 4000 50  0001 C CNN
+	1    2100 4000
+	1    0    0    -1  
+$EndComp
+Text Notes 4500 1650 0    50   ~ 0
+For (A/B) variants, populate this for\nDC/DC converter operation
+$Comp
+L Device:L L?
+U 1 1 5C9E1C70
+P 4650 2000
+F 0 "L?" V 4931 2000 50  0000 C CNN
+F 1 "10uH" V 4840 2000 50  0000 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric" H 4650 2000 50  0001 C CNN
+F 3 "~" H 4650 2000 50  0001 C CNN
+F 4 ">50mA" V 4749 2000 50  0000 C CNN "I,dc"
+	1    4650 2000
+	0    -1   -1   0   
+$EndComp
+Text Label 4500 2000 2    50   ~ 0
+DCC
+$Comp
+L Device:L L?
+U 1 1 5C9E3BFB
+P 4950 2000
+F 0 "L?" V 5140 2000 50  0000 C CNN
+F 1 "15nH" V 5049 2000 50  0000 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric" H 4950 2000 50  0001 C CNN
+F 3 "~" H 4950 2000 50  0001 C CNN
+	1    4950 2000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C9E4B59
+P 5400 2150
+F 0 "C?" H 5515 2196 50  0000 L CNN
+F 1 "1uF" H 5515 2105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5438 2000 50  0001 C CNN
+F 3 "~" H 5400 2150 50  0001 C CNN
+	1    5400 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C9E4FAF
+P 5400 2300
+F 0 "#PWR?" H 5400 2050 50  0001 C CNN
+F 1 "GND" H 5405 2127 50  0000 C CNN
+F 2 "" H 5400 2300 50  0001 C CNN
+F 3 "" H 5400 2300 50  0001 C CNN
+	1    5400 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP?
+U 1 1 5C9E5C8F
+P 5250 2000
+F 0 "JP?" H 5250 2113 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 5250 2114 50  0001 C CNN
+F 2 "e73-breakout:SolderJumper-0402" H 5250 2000 50  0001 C CNN
+F 3 "~" H 5250 2000 50  0001 C CNN
+	1    5250 2000
+	1    0    0    -1  
+$EndComp
+Text Label 5400 2000 0    50   ~ 0
+DEC4
+Text Label 1900 800  1    50   ~ 0
+DEC4
+NoConn ~ 1600 800 
+NoConn ~ 1700 800 
+NoConn ~ 1800 800 
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5C9E70F7
+P 4000 1000
+F 0 "#PWR?" H 4000 850 50  0001 C CNN
+F 1 "+3V3" H 4015 1173 50  0000 C CNN
+F 2 "" H 4000 1000 50  0001 C CNN
+F 3 "" H 4000 1000 50  0001 C CNN
+	1    4000 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C9E817D
+P 4000 1150
+F 0 "C?" H 4115 1196 50  0000 L CNN
+F 1 "4.7uF" H 4115 1105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4038 1000 50  0001 C CNN
+F 3 "~" H 4000 1150 50  0001 C CNN
+	1    4000 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C9E8AB6
+P 4000 1300
+F 0 "#PWR?" H 4000 1050 50  0001 C CNN
+F 1 "GND" H 4005 1127 50  0000 C CNN
+F 2 "" H 4000 1300 50  0001 C CNN
+F 3 "" H 4000 1300 50  0001 C CNN
+	1    4000 1300
+	1    0    0    -1  
+$EndComp
+Text Label 2300 800  1    50   ~ 0
+DCC
+$Comp
+L Device:L L?
+U 1 1 5C9E945F
+P 4850 3500
+F 0 "L?" V 5040 3500 50  0000 C CNN
+F 1 "PAD" V 4949 3500 50  0000 C CNN
+F 2 "" H 4850 3500 50  0001 C CNN
+F 3 "~" H 4850 3500 50  0001 C CNN
+	1    4850 3500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C9EA1A2
+P 4700 3650
+F 0 "C?" H 4815 3696 50  0000 L CNN
+F 1 "4pF" H 4815 3605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4738 3500 50  0001 C CNN
+F 3 "~" H 4700 3650 50  0001 C CNN
+	1    4700 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C9EA84E
+P 5000 3650
+F 0 "C?" H 5115 3696 50  0000 L CNN
+F 1 "4pF" H 5115 3605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5038 3500 50  0001 C CNN
+F 3 "~" H 5000 3650 50  0001 C CNN
+	1    5000 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C9EAFCA
+P 5000 3800
+F 0 "#PWR?" H 5000 3550 50  0001 C CNN
+F 1 "GND" H 5005 3627 50  0000 C CNN
+F 2 "" H 5000 3800 50  0001 C CNN
+F 3 "" H 5000 3800 50  0001 C CNN
+	1    5000 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C9EC226
+P 4700 3800
+F 0 "#PWR?" H 4700 3550 50  0001 C CNN
+F 1 "GND" H 4705 3627 50  0000 C CNN
+F 2 "" H 4700 3800 50  0001 C CNN
+F 3 "" H 4700 3800 50  0001 C CNN
+	1    4700 3800
+	1    0    0    -1  
+$EndComp
+Text Label 3000 1700 0    50   ~ 0
+NFC1
+Text Label 3000 1800 0    50   ~ 0
+NFC2
+Text Label 4700 3500 2    50   ~ 0
+NFC1
+Text Label 5000 3500 0    50   ~ 0
+NFC2
+$Comp
+L Device:CTRIM C?
+U 1 1 5C9ED60C
+P 5400 3650
+F 0 "C?" H 5516 3650 50  0000 L CNN
+F 1 "JZ100" H 5516 3605 50  0001 L CNN
+F 2 "Capacitor_SMD:C_1812_4532Metric" H 5400 3650 50  0001 C CNN
+F 3 "~" H 5400 3650 50  0001 C CNN
+	1    5400 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CTRIM C?
+U 1 1 5C9EEBE3
+P 4300 3650
+F 0 "C?" H 4416 3650 50  0000 L CNN
+F 1 "JZ100" H 4416 3605 50  0001 L CNN
+F 2 "Capacitor_SMD:C_1812_4532Metric" H 4300 3650 50  0001 C CNN
+F 3 "~" H 4300 3650 50  0001 C CNN
+	1    4300 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3500 4300 3500
+Connection ~ 4700 3500
+Wire Wire Line
+	4300 3800 4700 3800
+Connection ~ 4700 3800
+Wire Wire Line
+	5400 3800 5000 3800
+Connection ~ 5000 3800
+Wire Wire Line
+	5000 3500 5400 3500
+Connection ~ 5000 3500
+$EndSCHEMATC
