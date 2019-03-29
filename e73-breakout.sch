@@ -326,8 +326,6 @@ F 3 "" H 7400 4250 50  0001 C CNN
 	1    7400 4250
 	1    0    0    -1  
 $EndComp
-Text Label 7000 4000 2    50   ~ 0
-~RST
 $Comp
 L power:+3V3 #PWR0113
 U 1 1 5CA09280
@@ -524,7 +522,6 @@ F 3 "http://www.cdebyte.com/en/downpdf.aspx?id=243" H 2100 2850 50  0001 C CNN
 	1    2100 2400
 	1    0    0    -1  
 $EndComp
-NoConn ~ 3000 1900
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5CABABD2
@@ -548,15 +545,32 @@ F 3 "~" H 2500 6200 50  0001 C CNN
 	1    2500 6200
 	0    1    1    0   
 $EndComp
+Text Label 3000 1900 0    50   ~ 0
+SW
+Text Label 7000 4000 2    50   ~ 0
+SW
+Text Label 6500 4000 2    50   ~ 0
+~RST
 $Comp
-L Graphic:SYM_Arrow_Normal #SYM1
-U 1 1 5CABDC75
-P 7000 5000
-F 0 "#SYM1" H 7000 5060 50  0001 C CNN
-F 1 "SYM_Arrow_Normal" H 7010 4950 50  0001 C CNN
-F 2 "e73-breakout:SymbolLeadFree" H 7000 5000 50  0001 C CNN
-F 3 "~" H 7000 5000 50  0001 C CNN
-	1    7000 5000
+L Device:R R2
+U 1 1 5CACB0B4
+P 6500 3850
+F 0 "R2" H 6570 3896 50  0000 L CNN
+F 1 "10k" H 6570 3805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6430 3850 50  0001 C CNN
+F 3 "~" H 6500 3850 50  0001 C CNN
+	1    6500 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0115
+U 1 1 5CACB0BE
+P 6500 3700
+F 0 "#PWR0115" H 6500 3550 50  0001 C CNN
+F 1 "+3V3" H 6515 3873 50  0000 C CNN
+F 2 "" H 6500 3700 50  0001 C CNN
+F 3 "" H 6500 3700 50  0001 C CNN
+	1    6500 3700
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

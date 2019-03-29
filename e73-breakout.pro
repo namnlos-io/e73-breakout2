@@ -1,4 +1,4 @@
-update=3/28/2019 11:02:03 PM
+update=3/29/2019 2:06:08 AM
 version=1
 last_client=kicad
 [general]
@@ -22,7 +22,7 @@ AllowMicroVias=0
 AllowBlindVias=0
 RequireCourtyardDefinitions=0
 ProhibitOverlappingCourtyards=1
-MinTrackWidth=0.2
+MinTrackWidth=0.1524
 MinViaDiameter=0.4
 MinViaDrill=0.3
 MinMicroViaDiameter=0.2
@@ -61,7 +61,7 @@ SolderPasteRatio=-0
 [pcbnew/Netclasses]
 [pcbnew/Netclasses/1]
 Name=Thick
-Clearance=0.2
+Clearance=0.1524
 TrackWidth=0.5
 ViaDiameter=0.8
 ViaDrill=0.4
